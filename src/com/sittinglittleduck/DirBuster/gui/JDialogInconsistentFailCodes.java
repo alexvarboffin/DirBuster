@@ -176,7 +176,7 @@ public class JDialogInconsistentFailCodes extends javax.swing.JDialog
 
         jLabel6.setText("Regex to match a fail:");
 
-        jLabel7.setText("With out this DirBuster will return a large number of false positives.");
+        jLabel7.setText("Without this DirBuster will return a large number of false positives.");
 
         jButtonCancel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/sittinglittleduck/DirBuster/gui/icons/fileclose.png"))); // NOI18N
         jButtonCancel.setText("Cancel");

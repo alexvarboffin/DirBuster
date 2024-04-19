@@ -162,7 +162,7 @@ public class Start
 
 
                     /*
-                     * headless mode, run with out the gui
+                     * headless mode, run without the gui
                      */
                     case 'H':
                         headless = true;
