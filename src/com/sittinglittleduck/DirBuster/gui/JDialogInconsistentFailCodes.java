@@ -172,7 +172,7 @@ public class JDialogInconsistentFailCodes extends javax.swing.JDialog
 
         jLabel4.setText("Please examine the response returned, and enter a regular expression that will match on all 3 of the attemps.");
 
-        jLabel5.setText("The reglar expression will then be used to determine if the dir/files does or does not exist.");
+        jLabel5.setText("The regular expression will then be used to determine if the dir/files does or does not exist.");
 
         jLabel6.setText("Regex to match a fail:");
 

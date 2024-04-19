@@ -232,7 +232,7 @@
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel5">
       <Properties>
-        <Property name="text" type="java.lang.String" value="The reglar expression will then be used to determine if the dir/files does or does not exist."/>
+        <Property name="text" type="java.lang.String" value="The regular expression will then be used to determine if the dir/files does or does not exist."/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel6">
