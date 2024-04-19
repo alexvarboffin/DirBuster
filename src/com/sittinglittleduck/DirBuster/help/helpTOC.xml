@@ -34,7 +34,7 @@
     <tocitem text="Using Your Own Lists" target="own-list" image="topic" />
     <tocitem text="During Scanning" image="chapter" >
         <tocitem text="Telling DirBuster Not To Scan A Dir It Has Found" target="item1" image="topic" />
-        <tocitem text="Viewing Responces" target="item1" image="topic" />
+        <tocitem text="Viewing Responses" target="item1" image="topic" />
         <tocitem text="Skipping A The Current Working Dir" target="item1" image="topic" />
     </tocitem>
 </tocitem>

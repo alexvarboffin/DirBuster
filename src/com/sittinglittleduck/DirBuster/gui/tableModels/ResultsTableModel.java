@@ -178,7 +178,7 @@ public class ResultsTableModel extends DefaultTableModel
         }
         else if (col==2)
         {
-            return data.get(row).getResponceCode();
+            return data.get(row).getResponseCode();
         }
         else if(col == 3)
         {
@@ -202,7 +202,7 @@ public class ResultsTableModel extends DefaultTableModel
         return temp.getFieldType() + temp.getFieldFound();
     }
     
-    public String getRowResponceCode(int row)
+    public String getRowResponseCode(int row)
     {
         if ( row < 0 || row >= data.size() ) return null;
         ResultsTableObject temp = (ResultsTableObject) data.get(row);
@@ -213,17 +213,17 @@ public class ResultsTableModel extends DefaultTableModel
     {
         if ( row < 0 || row >= data.size() ) return null;
         ResultsTableObject temp = (ResultsTableObject) data.get(row);
-        //System.out.println("Getting Responce for row: " + row);
-        //System.out.println("Responce = " + temp.getResponce());
-        return temp.getResponce();
+        //System.out.println("Getting Response for row: " + row);
+        //System.out.println("Response = " + temp.getResponse());
+        return temp.getResponse();
     }
     
     public DirToCheck getDirToCheck(int row)
     {
         if ( row < 0 || row >= data.size() ) return null;
         ResultsTableObject temp = (ResultsTableObject) data.get(row);
-        //System.out.println("Getting Responce for row: " + row);
-        //System.out.println("Responce = " + temp.getResponce());
+        //System.out.println("Getting Response for row: " + row);
+        //System.out.println("Response = " + temp.getResponse());
         return temp.getDirToCheck();
     }
     
@@ -231,17 +231,17 @@ public class ResultsTableModel extends DefaultTableModel
     {
         if ( row < 0 || row >= data.size() ) return null;
         ResultsTableObject temp = (ResultsTableObject) data.get(row);
-        //System.out.println("Getting Responce for row: " + row);
-        //System.out.println("Responce = " + temp.getResponce());
-        return temp.getRawResponce();
+        //System.out.println("Getting Response for row: " + row);
+        //System.out.println("Response = " + temp.getResponse());
+        return temp.getRawResponse();
     }
     
     public String getBaseCase(int row)
     {
         if ( row < 0 || row >= data.size() ) return null;
         ResultsTableObject temp = (ResultsTableObject) data.get(row);
-        //System.out.println("Getting Responce for row: " + row);
-        //System.out.println("Responce = " + temp.getResponce());
+        //System.out.println("Getting Response for row: " + row);
+        //System.out.println("Response = " + temp.getResponse());
         return temp.getBaseCase();
     }
     

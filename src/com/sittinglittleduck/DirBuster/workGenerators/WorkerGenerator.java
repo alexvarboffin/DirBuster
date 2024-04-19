@@ -142,15 +142,15 @@ public class WorkerGenerator implements Runnable
                 }
 
                 httphead.setFollowRedirects(Config.followRedirects);
-                int responceCode = httpclient.executeMethod(httphead);
+                int responseCode = httpclient.executeMethod(httphead);
 
                 if(Config.debug)
                 {
-                    System.out.println("DEBUG WokerGen: responce code for head check = " + responceCode);
+                    System.out.println("DEBUG WokerGen: response code for head check = " + responseCode);
                 }
 
-                //if the responce code is method not implemented or if the head requests return 400!
-                if(responceCode == 501 || responceCode == 400 || responceCode == 405)
+                //if the response code is method not implemented or if the head requests return 400!
+                if(responseCode == 501 || responseCode == 400 || responseCode == 405)
                 {
                     if(Config.debug)
                     {
@@ -176,7 +176,7 @@ public class WorkerGenerator implements Runnable
         while((!dirQueue.isEmpty() || !workQueue.isEmpty() || !manager.areWorkersAlive()) && recursive)
         {
             //get the dir we are about to process
-            String baseResponce = null;
+            String baseResponse = null;
             recursive = manager.isRecursive();
             BaseCase baseCaseObj = null;
 
@@ -213,7 +213,7 @@ public class WorkerGenerator implements Runnable
 
                 try
                 {
-                    baseResponce = null;
+                    baseResponse = null;
                     manager.setStatus("Getting fail case for " + currentDir);
 
                     baseCaseObj = GenBaseCase.genBaseCase(firstPart + currentDir, true, null);
@@ -318,7 +318,7 @@ public class WorkerGenerator implements Runnable
                                 }
 
                                 currentURL = new URL(firstPart + currentDir + line + "/");
-                                //BaseCase baseCaseObj = new BaseCase(currentURL, failcode, true, failurl, baseResponce);
+                                //BaseCase baseCaseObj = new BaseCase(currentURL, failcode, true, failurl, baseResponse);
                                 //if the base case is null then we need to switch to content anylsis mode
 
                                 //System.out.println("Gen about to add to queue");
@@ -363,7 +363,7 @@ public class WorkerGenerator implements Runnable
             if(manager.getDoFiles())
             {
 
-                baseResponce = null;
+                baseResponse = null;
                 URL failurl = null;
 
                 //loop for all the different file extentions
@@ -441,7 +441,7 @@ public class WorkerGenerator implements Runnable
                                         }
 
                                         URL currentURL = new URL(firstPart + currentDir + line + fileExtention);
-                                        //BaseCase baseCaseObj = new BaseCase(currentURL, true, failurl, baseResponce);
+                                        //BaseCase baseCaseObj = new BaseCase(currentURL, true, failurl, baseResponse);
                                         workQueue.put(new WorkUnit(currentURL, false, method, baseCaseObj, line));
                                         if(Config.debug)
                                         {

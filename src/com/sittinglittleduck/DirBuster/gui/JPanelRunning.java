@@ -784,19 +784,19 @@ public class JPanelRunning extends javax.swing.JPanel implements ClipboardOwner
         Result item = node.getResult();
         
         /*
-        new JDialogViewResponce(parent, true,
-                resultsTableModel.getRowResponce(select),
+        new JDialogViewResponse(parent, true,
+                resultsTableModel.getRowResponse(select),
                 resultsTableModel.getSelectedURL(select),
                 resultsTableModel.getBaseCase(select),
-                resultsTableModel.getRowRawResponce(select),
+                resultsTableModel.getRowRawResponse(select),
                 resultsTableModel.getBaseCaseObj(select)).setVisible(true);
          */
         /*
         new JDialogViewResponse(parent, true,
                 item.getFullURL(),
-                item.getResponce(),
+                item.getResponse(),
                 item.getBaseCase(),
-                item.getRawResponce(),
+                item.getRawResponse(),
                 item.getBaseCaseObj()).setVisible(true);
         */
 }//GEN-LAST:event_jMenuItemViewResponseActionPerformed

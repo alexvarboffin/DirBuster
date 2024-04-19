@@ -104,10 +104,10 @@ public class BruteForceWorkGenerator implements Runnable
                     HTTPHeader httpHeader = (HTTPHeader) HTTPheaders.elementAt(a);
                     httphead.setRequestHeader(httpHeader.getHeader(), httpHeader.getValue());
                 }
-                int responceCode = httpclient.executeMethod(httphead);
+                int responseCode = httpclient.executeMethod(httphead);
                 
-                //if the responce code is method not implemented or fails
-                if(responceCode == 501 || responceCode == 400)
+                //if the response code is method not implemented or fails
+                if(responseCode == 501 || responseCode == 400)
                 {
                     //switch the mode to just GET requests
                     manager.setAuto(false);
@@ -156,7 +156,7 @@ public class BruteForceWorkGenerator implements Runnable
                 try
                 {
                     manager.setStatus("Getting fail case for " + currentDir);
-                    //get fail responce code for a dir test
+                    //get fail response code for a dir test
                     
                     baseCaseObj = GenBaseCase.genBaseCase(firstPart + currentDir, true, null);
                     

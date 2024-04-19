@@ -80,20 +80,20 @@ public class ReportWriter
 
         }
 
-        //get responce codes for dirs
+        //get response codes for dirs
         for(int b = 0; b < dirs.size(); b ++)
         {
-            Integer code = new Integer(dirs.elementAt(b).getResponceCode());
+            Integer code = new Integer(dirs.elementAt(b).getResponseCode());
             if( ! dirCodes.contains(code))
             {
                 dirCodes.addElement(code);
             }
         }
 
-        //get responce codes for files
+        //get response codes for files
         for(int b = 0; b < files.size(); b ++)
         {
-            Integer code = new Integer(files.elementAt(b).getResponceCode());
+            Integer code = new Integer(files.elementAt(b).getResponseCode());
             if( ! fileCodes.contains(code))
             {
                 fileCodes.addElement(code);
@@ -124,7 +124,7 @@ public class ReportWriter
                     out.newLine();
                     for(int b = 0; b < dirs.size(); b ++)
                     {
-                        if(code == dirs.elementAt(b).getResponceCode() )
+                        if(code == dirs.elementAt(b).getResponseCode() )
                         {
                             out.write(dirs.elementAt(b).getItemFound().getPath());
                             out.newLine();
@@ -149,12 +149,12 @@ public class ReportWriter
                 for(int a = 0; a < fileCodes.size(); a ++)
                 {
                     int code = ((Integer) fileCodes.elementAt(a)).intValue();
-                    out.write("Files found with a " + code + " responce:");
+                    out.write("Files found with a " + code + " response:");
                     out.newLine();
                     out.newLine();
                     for(int b = 0; b < files.size(); b ++)
                     {
-                        if(code == files.elementAt(b).getResponceCode() )
+                        if(code == files.elementAt(b).getResponseCode() )
                         {
                             out.write(files.elementAt(b).getItemFound().getPath());
                             out.newLine();
@@ -331,7 +331,7 @@ public class ReportWriter
                     type = "File";
                 }
 
-                out.write("<Result type=\"" + type + "\" path=\"" + data.elementAt(a).getItemFound().getPath() + "\" responseCode=\"" + data.elementAt(a).getResponceCode() + "\" />");
+                out.write("<Result type=\"" + type + "\" path=\"" + data.elementAt(a).getItemFound().getPath() + "\" responseCode=\"" + data.elementAt(a).getResponseCode() + "\" />");
                 out.newLine();
             }
 
@@ -378,7 +378,7 @@ public class ReportWriter
              */
             for(int a = 0; a < data.size(); a++)
             {
-                out.write("\"" + data.elementAt(a).getItemFound().getPath() + "\",\"" + data.elementAt(a).getResponceCode() + "\",\"" + (data.elementAt(a).getResponseHeader() + data.elementAt(a).getResponseBody()).length() + "\"");
+                out.write("\"" + data.elementAt(a).getItemFound().getPath() + "\",\"" + data.elementAt(a).getResponseCode() + "\",\"" + (data.elementAt(a).getResponseHeader() + data.elementAt(a).getResponseBody()).length() + "\"");
                 out.newLine();
             }
         }

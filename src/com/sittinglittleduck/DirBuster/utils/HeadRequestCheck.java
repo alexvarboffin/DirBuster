@@ -59,12 +59,12 @@ public class HeadRequestCheck
                     HTTPHeader httpHeader = (HTTPHeader) HTTPheaders.elementAt(a);
                     httphead.setRequestHeader(httpHeader.getHeader(), httpHeader.getValue());
                 }
-                int responceCode = httpclient.executeMethod(httphead);
+                int responseCode = httpclient.executeMethod(httphead);
 
                 /*
-                 * if the responce code is method not implemented or fails
+                 * if the response code is method not implemented or fails
                  */
-                if(responceCode == 501 || responceCode == 400)
+                if(responseCode == 501 || responseCode == 400)
                 {
                     //switch the mode to just GET requests
                     manager.setAuto(false);
