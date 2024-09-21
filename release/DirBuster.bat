@@ -1,2 +1,2 @@
-java -Xmx256M -jar "C:\Program Files (x86)\DirBuster\1.0-RC1\DirBuster.jar"
+"C:\Program Files\Java\jdk-17\bin\java.exe" -Xmx256M -jar "DirBuster.jar"
 pause
